@@ -1,0 +1,130 @@
+
+.sidebar {
+    width: 280px;
+    min-height: 100vh;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 24px 18px;
+    flex-shrink: 0;
+}
+
+.sidebar-header {
+    padding: 8px 10px 28px;
+}
+
+.sidebar-header h2 {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.sidebar-content {
+    flex: 1;
+}
+
+.sidebar-section {
+    margin-bottom: 32px;
+}
+
+.section-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+}
+
+.upload-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100%;
+    padding: 13px;
+
+    background: var(--accent-color);
+    color: white;
+
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.upload-button:hover {
+    opacity: 0.85;
+}
+
+.upload-button:has(input:disabled) {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.uploaded-file {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px;
+
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+
+    font-size: 13px;
+    color: var(--text-primary);
+
+    overflow-wrap: anywhere;
+}
+
+.uploaded-file svg {
+    flex-shrink: 0;
+    color: var(--accent-color);
+}
+
+.empty-document {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.upload-message {
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    overflow-wrap: anywhere;
+}
+
+.sidebar-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 16px 10px;
+
+    border-top: 1px solid var(--border-color);
+
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.sidebar-footer svg {
+    color: var(--accent-color);
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
