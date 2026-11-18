@@ -1,16 +1,62 @@
-# React + Vite
+# AI PDF Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered PDF question-answering application built with React, Node.js, LangChain, Ollama and ChromaDB.
 
-Currently, two official plugins are available:
+The application allows users to upload PDF documents and ask questions about their contents. It uses Retrieval-Augmented Generation (RAG) to retrieve relevant information from uploaded documents and generate context-aware responses.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Upload PDF documents.
+- Extract and split document text into chunks.
+- Generate embeddings using Ollama.
+- Store document embeddings in ChromaDB.
+- Retrieve relevant information using semantic search.
+- Ask questions and receive AI-generated answers based on document content.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies Used
 
-## Expanding the ESLint configuration
+- React
+- Node.js
+- Express.js
+- LangChain
+- Ollama
+- ChromaDB
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+This project is designed to run locally. It is not currently hosted.
+
+To use the application, clone the repository and follow the installation instructions below.
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+cd ai-pdf-assistant
+```
+
+Install the dependencies in both the frontend and backend folders, configure the required environment, and start the services.
+
+### Requirements
+
+- Node.js
+- Python
+- Ollama
+- ChromaDB
+- The `llama3.2` model
+- The `embeddinggemma` model
+
+Pull the required Ollama models:
+
+```bash
+ollama pull llama3.2
+ollama pull embeddinggemma
+```
+
+### Running the application
+
+Start ChromaDB, then start the backend and frontend in separate terminals.
+
+The frontend communicates with the local Express backend, which uses Ollama and ChromaDB for document processing and question answering.
+
+## Important Note
+
+This application currently runs locally and requires the dependencies listed above. No hosted demo is available yet.
